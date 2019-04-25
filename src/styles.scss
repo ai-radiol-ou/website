@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+// customize bulma's variables
+$blue: #384EB4;
+$yellow: #ffd868;
+$black: #5e5e60;
+
+$primary: $yellow;
+$info: $blue;
+
+// $link-hover: $yellow;
+// $link: $info;
+
+$navbar-box-shadow-color: $primary;
+$navbar-box-shadow-size: 0 4px 0 0 !default;
+
+$footer-padding: 1.5em;
+
+$family-primary: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN", 'Noto Sans JP', 'Noto Sans CJK JP',YuGothic,"Yu Gothic Medium",Verdana,Meiryo,sans-serif;
+//$family-primary: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN","Yu Gothic Medium",YuGothic,Verdana,Meiryo,sans-serif;
+
+// @import "../node_modules/bulma/bulma.sass";
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
+//@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/breadcrumb.sass";
+@import "../node_modules/bulma/sass/components/list.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/footer.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+// global setting
+html {
+    font-feature-settings: "palt";
+    letter-spacing:1px;
+    text-align:justify;
+}
+
+// sticky footer
+body, .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+}
+
+
+footer {
+    span  {
+        white-space: nowrap
+    }
+}
+
+.hero-ai {
+    @extend .hero;
+    background: $black url('/img/hero.jpg') 50% 30%/cover;
+    border-bottom: solid $black;
+    text-shadow: -1px -1px 2px $black, 1px -1px 2px $black, -1px 1px 2px $black, 1px 1px 2px $black;
+    .title, .subtitle {
+        color: white;
+    }
+    span  {
+        display: inline-block;
+        white-space: nowrap
+    }
+}
+
+
+@media screen and (min-width: 1080px) {
+    .hero-ai {
+        background: $black url('/img/hero_large.jpg') 50% 60%/cover;
+    }
+}
+
+::selection {
+    background: $yellow;
+}
+::-moz-selection {
+    background: $yellow;
+}
+
+
+// indentation for articles
+article {
+    h2 {
+        border-bottom: solid $black 1px;
+    }
+    p {
+        text-indent: 1em;
+        margin: 1em 0;
+    }
+}
+
+h2.title:not(:last-child) {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+.enumerate-h2{
+    article {
+        counter-reset : h2;
+    }
+    h2:before {
+        white-space: pre;
+        content : counter(h2,decimal) ". ";
+        counter-increment : h2;
+    }
+}
+
+// narrow container
+.container.narrow {
+    margin: 0 auto;
+    position: relative;
+}
+@media screen and (min-width: 1088px) {
+    .container.narrow {
+        max-width: 960px;
+        width: 960px; }
+    .container.is-fluid.narrow {
+        margin-left: 64px;
+        margin-right: 64px;
+        max-width: none;
+        width: auto; }
+}
+
+.navbar-menu {
+    background-color: $blue;
+}
+.navbar-item {
+    color: white;
+    a {
+        color: white;
+    }
+}
+
+.list-w-title {
+    h1 {
+        background: $blue;
+        color: white;
+        padding: 1em;
+        border-top-left-radius: $radius-large;
+        border-top-right-radius: $radius-large;
+        display: inline-block;
+    }
+
+    ul {
+        li {
+            background: mix($background, $blue, 95%);
+            padding: 0.8em;
+        }
+        $list-border-width: 0.5em;
+        // loop school colors
+        li:nth-child(3n+1) {
+            border-left: solid $list-border-width $blue;
+        }
+        li:nth-child(3n+2) {
+            border-left: solid $list-border-width $yellow;
+        }
+        li:nth-child(3n+3) {
+            border-left: solid $list-border-width $black;
+        }
+        li:first-child {
+            border-top-right-radius: $radius;
+        }
+        li:last-child {
+            border-bottom-left-radius: $radius;
+            border-bottom-right-radius: $radius;
+        }
+    }
+}
+
+.breadcrumb {
+    white-space: normal; // allow line breaking
+}
+
+.navbar-menu.is-active {
+    animation: show-menu .5s linear;
+}
+
+@keyframes show-menu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

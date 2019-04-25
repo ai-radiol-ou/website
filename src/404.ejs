@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <% const title='404エラー'%>
+  <%- include src/head.ejs %>
+  <div class="wrapper">
+    <body>
+      <%- include src/header.ejs %>
+      <section class="section">
+        <div class="container">
+          <div class="container narrow">
+            <main role="main">
+              <h1 class="title">
+                404 Page not found.
+              </h1>
+              <p>
+                ページが見つかりません。
+              </p>
+              <p>
+                <button class="button" type="button" onclick="history.back()">
+                  <span class="icon">
+                    <i class="fas fa-backward"></i>
+                  </span>
+                  <span>
+                    前のページに戻る
+                  </span>
+                </button>
+
+                <a class="button" href="/index.html">
+                  <span class="icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span>トップページ</span>
+                </a>
+              </p>
+            </main>
+          </div>
+        </div>
+      </section>
+      <%- include src/footer.html %>
+    </body>
+  </div>
+</html>

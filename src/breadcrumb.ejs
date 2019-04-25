@@ -1,0 +1,24 @@
+<nav class="breadcrumb" aria-label="パンくずリスト">
+  <ul>
+    <li><a href="/index.html">
+      <span class="icon">
+        <i class="fas fa-home" aria-label="トップページに戻る"></i>
+      </span>
+    </a></li>
+    <% crumbs.forEach(function(crumb,i,a) {
+      const crumb_title=crumb[0];
+      const crumb_href=crumb[1];
+      const crumb_class = (i==(crumbs.length-1)) ? "is-active" : "not-active";
+      const ac = (i==(crumbs.length-1)) ? 'aria-current="page"' : '';
+    %>
+    <li class="
+               <%-crumb_class%>
+               ">
+      <a href=<%-crumb_href%> <%-ac%>>
+        <span>
+          <%-crumb_title%>
+        </span>
+      </a></li>
+    <% }); %>
+  </ul>
+</nav>

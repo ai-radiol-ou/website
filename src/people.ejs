@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <% const title='スタッフ'%>
+  <%- include src/head.ejs %>
+  <div class="wrapper">
+    <body>
+      <%- include src/header.ejs %>
+      <section class="section">
+        <div class="container">
+          <% const crumbs=[[title,'people.html']] %>
+          <%- include src/breadcrumb%>
+          <main role="main">
+            <div class="columns">
+              <%  const staffs = [
+                {name:'木戸尚治',position:'特任教授',email:'kido@radiol.med',room:'C41-13 助教室'},
+                {name:'鈴木裕紀',position:'特任助教',email:'y-suzuki@radiol.med',room:'C41-05a 企画室'},
+                /* {name:'澤百合子',position:'事務補佐員',email:'hisyo-ai@radiol.med',room:'C41-05b 企画室'}, */
+              ];%>
+              <% staffs.forEach(function(staff) {%>
+                <%- include src/staff_card.ejs%>
+              <%  });%>
+            </div>
+            <aside style="text-align:right">
+              <small>*メールアドレスの末尾には.osaka-u.ac.jpを追加してください</small>
+            </aside>
+        </div>
+          </main>
+      </section>
+      <%- include src/footer.html %>
+    </body>
+  </div>
+</html>

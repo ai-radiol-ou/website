@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <% const title=''%>
+  <%- include src/head.ejs%>
+  <div class="wrapper">
+    <body>
+      <%- include src/header.ejs %>
+      <section class="hero-ai is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              <span>人工知能画像診断学</span><span>共同研究講座</span>
+            </h1>
+            <h2 class="subtitle">
+              <span>大阪大学大学院</span><span>医学系研究科</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <main role="main">
+            <div class="columns has-text-centered">
+              <div class="column is-one-third">
+                <a class="box" href="/people.html">
+                  <div><span class="fas fa-3x fa-users"></span></div>
+                  <div class="is-size-5">
+                    スタッフ
+                  </div>
+                </a>
+              </div>
+              <div class="column is-one-third">
+                <a class="box" href="/research.html">
+                  <div><span class="fas fa-3x fa-pencil-alt"></span></div>
+                  <div class="is-size-5">
+                    研究
+                  </div>
+                </a>
+              </div>
+              <div class="column is-one-third">
+                <a class="box" href="/optout/">
+                  <div><span class="fas fa-3x fa-notes-medical"></span></div>
+                  <div class="is-size-5">
+                    オプトアウト
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="list-w-title">
+              <h1 class="is-size-5">臨床に役立つ人工知能技術を用いたコンピュータ支援診断システムの臨床展開</h1>
+              <ul>
+                <li>AIを用いたコンピュータ支援診断（AI-CAD）システム開発のための大規模画像症例データベースの構築</li>
+                <li>高精度なAI-CADシステムの開発と臨床ワークフローへの導入</li>
+                <li>少数症例問題対応AI（X-shot learning AI）や説明可能AI（Explainable AI）技術の開発</li>
+                <li>Radiomics/radiogenomics解析などのデータサイエンス的アプローチによる画像診断精度向上</li>
+              </ul>
+            </div>
+          </main>
+        </div>
+      </section>
+      <%- include src/footer.html %>
+    </body>
+  </div>
+</html>
