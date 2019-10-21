@@ -30,4 +30,5 @@ module.exports = {
   ]
 };
 
-ejss = ['index', 'people', 'research','404','optout/index','optout/201909']
+ejss = ['index', 'people', 'research', 'links', '404',
+        'optout/index', 'optout/201909']

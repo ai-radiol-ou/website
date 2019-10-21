@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <% const title='リンク'%>
+  <%- include src/head.ejs %>
+  <div class="wrapper">
+    <body>
+      <%- include src/header.ejs %>
+      <section class="section">
+        <div class="container">
+          <% const crumbs=[[title,'links.html']] %>
+          <%- include src/breadcrumb%>
+          <main role="main">
+            <div class="content">
+              <p>
+                本講座の関連リンクです。
+              </p>
+              <ul>
+                <li>
+                  <a href="http://www.med.osaka-u.ac.jp/" target="_blank" rel="noopener noreferrer">大阪大学大学院医学系研究科</a>
+                </li>
+                <li>
+                  <a href="http://radiol-osaka-u.com/" target="_blank" rel="noopener noreferrer">大阪大学大学院医学系研究科 放射線統合医学講座 放射線医学教室</a>
+                </li>
+              </ul>
+            </div>
+          </main>
+      </section>
+      <%- include src/footer.html %>
+    </body>
+  </div>
+</html>
