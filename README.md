@@ -1,4 +1,4 @@
-#  Website for AI Diagnostic Radioology #
+#  Website for AI in Diagnostic Radioology #
 www.ai-radiol.med.osaka-u.ac.jp
 
 ## How to ##
