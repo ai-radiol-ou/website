@@ -192,3 +192,8 @@ h2.title:not(:last-child) {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+a.no-decoration {
+    color: inherit;
+    text-decoration: none;
+}
