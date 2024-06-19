@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --hot--watch-content-base",
-    "check": "webpack-dev-server --config webpack.dev.js --hot --inline --watch-content-base --disable-host-check --host 0.0.0.0 --port 80",
+    "check": "webpack-dev-server --config webpack.dev.js --hot --inline --watch-content-base --disable-host-check --host 0.0.0.0 --port 8080",
     "build": "webpack --config webpack.prod.js --mode production"
   },
   "author": "Yuki Suzuki",
@@ -18,9 +18,9 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^9.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^10.5.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
