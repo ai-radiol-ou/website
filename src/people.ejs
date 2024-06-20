@@ -10,10 +10,17 @@
           <% const crumbs=[[title,'people.html']] %>
           <%- include src/breadcrumb%>
           <main role="main">
-            <div class="columns">
+            <div class="columns is-multiline">
               <% const staffs = [
                 {name:'堀　雅敏',position:'特任教授',email:'mhori@radiol.med',room:'C41-14a 形態学実験研究室(I)',url:'https://rd.iai.osaka-u.ac.jp/ja/8ca5dff2bb1de2e0.html'},
-                {name:'鈴木裕紀',position:'特任助教',email:'y-suzuki@radiol.med',room:'C41-05a 企画室',url:'https://rd.iai.osaka-u.ac.jp/ja/fae2bb249f43f367.html'}
+                {name:'鈴木裕紀',position:'特任助教',email:'y-suzuki@radiol.med',room:'C41-05a 企画室',url:'https://rd.iai.osaka-u.ac.jp/ja/fae2bb249f43f367.html'},
+                {name:'喜多洸介',position:'大学院生／学振特別研究員',email:'',room:''},
+                {name:'小田惣也',position:'大学院生',email:'',room:''},
+                {name:'佐藤淳哉',position:'大学院生／専攻医',email:'',room:''},
+                {name:'富山実幸',position:'大学院生／専攻医',email:'',room:''},
+                {name:'平岡　悠',position:'大学院生／専攻医',email:'',room:''},
+                {name:'工藤　彰',position:'研究生',email:'',room:''},
+                {name:'木戸尚治',position:'招へい教授',email:'',room:''}
               ];%>
               <% staffs.forEach(function(staff) {%>
                 <%- include src/staff_card.ejs%>
