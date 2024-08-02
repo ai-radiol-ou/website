@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <% const title='研究'%>
+  <% const title='研究活動'%>
   <%- include src/head.ejs %>
   <div class="wrapper">
     <body>
@@ -11,9 +11,9 @@
           <%- include src/breadcrumb%>
           <div class="container">
             <main role="main">
-              <p>
-                研究内容について記載する予定です。
-              </p>
+              <div class="content">
+              <%- include src/publications.html %>
+              </div>
             </main>
           </div>
         </div>

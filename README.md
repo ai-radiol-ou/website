@@ -7,7 +7,7 @@ www.ai-radiol.med.osaka-u.ac.jp
     npm install
 
 ### Start a dev server ###
-    npm run start
+    make develop
 
 ### Build the pages ###
-    npm run build
+    make
