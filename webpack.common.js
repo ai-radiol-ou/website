@@ -31,4 +31,4 @@ module.exports = {
 };
 
 ejss = ['index', 'people', 'research', 'links', '404',
-        'optout/index', 'optout/201909']
+        'optout']

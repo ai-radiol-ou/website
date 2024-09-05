@@ -8,3 +8,9 @@ src/publications.html: data/publications.xlsx
 
 develop: src/publications.html
 	NODE_OPTIONS=--openssl-legacy-provider npm run check
+
+build: dist/index.html
+	NODE_OPTIONS=--openssl-legacy-provider npm run build
+
+clean:
+	rm -rf dist && git checkout dist

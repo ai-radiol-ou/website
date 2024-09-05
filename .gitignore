@@ -1,5 +1,4 @@
 dist/**.html
-dist/optout/
 dist/css/
 dist/js/
 **/bundle.js
